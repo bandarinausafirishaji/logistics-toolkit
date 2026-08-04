@@ -98,10 +98,18 @@ wanafunzi na wadau wa sekta ya bandari, usafirishaji na logistics.
 <h3>TEU Calculator</h3>
 
 <p>
-Ingiza idadi ya makontena ili kupata jumla ya TEU.
+Calculate container capacity in TEU.
 </p>
 
-<input type="number" id="container" placeholder="Idadi ya containers">
+<label>20ft Containers</label>
+<input type="number" id="twenty" placeholder="Number of 20ft containers">
+
+<br><br>
+
+<label>40ft Containers</label>
+<input type="number" id="forty" placeholder="Number of 40ft containers">
+
+<br><br>
 
 <button onclick="calculateTEU()">
 Calculate TEU
@@ -110,7 +118,6 @@ Calculate TEU
 <p id="result"></p>
 
 </div>
-
 
 <div class="tool">
 <h3>CBM Calculator</h3>
@@ -155,12 +162,13 @@ Customs, Transport Coordination na International Trade.
 <script>
 function calculateTEU() {
 
-let containers = document.getElementById("container").value;
+let twenty = document.getElementById("twenty").value;
+let forty = document.getElementById("forty").value;
 
-let teu = containers * 1;
+let totalTEU = (twenty * 1) + (forty * 2);
 
 document.getElementById("result").innerHTML =
-"Total TEU: " + teu;
+"Total TEU: " + totalTEU;
 
 }
 </script>
