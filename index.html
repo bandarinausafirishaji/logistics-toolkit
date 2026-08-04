@@ -94,8 +94,21 @@ wanafunzi na wadau wa sekta ya bandari, usafirishaji na logistics.
 <div class="tools">
 
 <div class="tool">
+<div class="tool">
 <h3>TEU Calculator</h3>
-<p>Kusaidia kufanya hesabu za uwezo wa makontena katika usafirishaji wa baharini.</p>
+
+<p>
+Ingiza idadi ya makontena ili kupata jumla ya TEU.
+</p>
+
+<input type="number" id="container" placeholder="Idadi ya containers">
+
+<button onclick="calculateTEU()">
+Calculate TEU
+</button>
+
+<p id="result"></p>
+
 </div>
 
 
@@ -139,6 +152,17 @@ Customs, Transport Coordination na International Trade.
 <p>© 2026 Bandari na Usafirishaji | Logistics Hub Tools</p>
 </footer>
 
+<script>
+function calculateTEU() {
 
+let containers = document.getElementById("container").value;
+
+let teu = containers * 1;
+
+document.getElementById("result").innerHTML =
+"Total TEU: " + teu;
+
+}
+</script>
 </body>
 </html>
