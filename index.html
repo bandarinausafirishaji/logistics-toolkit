@@ -183,6 +183,25 @@ Calculate CBM
 
 
 </div>
+    <div class="card">
+
+<h2>Container Size Calculator</h2>
+
+<p>
+Ingiza CBM ya mzigo ili kupata mapendekezo ya ukubwa wa kontena.
+</p>
+
+<input type="number" id="cargoCBM" placeholder="Cargo CBM (m³)">
+
+<br><br>
+
+<button onclick="checkContainer()">
+Check Container
+</button>
+
+<p id="containerResult"></p>
+
+</div>
 
     <div class="card">
 
@@ -330,8 +349,48 @@ document.getElementById("cbmResult").innerHTML =
 
 
 }
+function checkContainer(){
+
+let cbm = Number(document.getElementById("cargoCBM").value);
+
+let result = "";
+
+if(cbm <= 33){
+
+result =
+"Recommended: 20GP Container<br>" +
+"Capacity: Approx. 33 m³";
+
+}
+
+else if(cbm <= 67){
+
+result =
+"Recommended: 40GP Container<br>" +
+"Capacity: Approx. 67 m³";
+
+}
+
+else if(cbm <= 76){
+
+result =
+"Recommended: 40HC Container<br>" +
+"Capacity: Approx. 76 m³";
+
+}
+
+else{
+
+result =
+"Cargo volume exceeds standard container capacity. Consider multiple containers.";
+
+}
 
 
+document.getElementById("containerResult").innerHTML = result;
+
+
+}
 </script>
 
 
