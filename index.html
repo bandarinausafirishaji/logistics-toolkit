@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bandari na Usafirishaji | Logistics Hub Tools</title>
+<title>Bandari na Usafirishaji - Logistics Hub Tools</title>
 
 <style>
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,127 +18,202 @@ body {
 header {
     background: #0B3A6E;
     color: white;
-    padding: 40px 20px;
+    padding: 30px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 32px;
-}
-
-header p {
-    font-size: 18px;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
     padding: 20px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin: 20px 0;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-h2 {
+.card h2 {
     color: #0B3A6E;
 }
 
-.tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
 }
 
-.tool {
-    background: #ffffff;
-    padding: 20px;
-    border-left: 5px solid #F28C28;
+button {
+    background: #F28C28;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
     border-radius: 5px;
 }
 
+button:hover {
+    opacity: 0.9;
+}
+
 footer {
-    background: #222;
+    background: #0B3A6E;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
+
 </style>
 
 </head>
 
+
 <body>
 
 <header>
+
 <h1>Bandari na Usafirishaji</h1>
-<p>Logistics Hub Tools & Knowledge Resources</p>
+
+<p>
+Logistics Hub Tools kwa Port Operations, Container Handling,
+Transport Coordination na International Trade.
+</p>
+
 </header>
 
 
 <div class="container">
 
+
 <div class="card">
+
 <h2>Karibu Logistics Hub Tools</h2>
 
 <p>
-Mfumo huu unalenga kutoa zana rahisi za kusaidia wataalamu,
-wanafunzi na wadau wa sekta ya bandari, usafirishaji na logistics.
+Mfumo huu unatoa zana rahisi za kusaidia wataalamu,
+wanafunzi na wadau wa sekta ya bandari, usafirishaji
+na logistics.
 </p>
 
 </div>
 
 
-<div class="tools">
 
-<div class="tool">
-<div class="tool">
-<h3>TEU Calculator</h3>
+<div class="card">
+
+<h2>TEU Calculator</h2>
 
 <p>
-Calculate container capacity in TEU.
+Hesabu uwezo wa makontena kulingana na ukubwa wake.
 </p>
 
-<label>20ft Containers</label>
-<input type="number" id="twenty" placeholder="Number of 20ft containers">
+
+<label>
+20ft Containers
+</label>
+
+<br>
+
+<input type="number" id="twenty"
+placeholder="Idadi ya 20ft containers">
+
+
+<br>
+
+
+<label>
+40ft Containers
+</label>
+
+<br>
+
+<input type="number" id="forty"
+placeholder="Idadi ya 40ft containers">
+
 
 <br><br>
 
-<label>40ft Containers</label>
-<input type="number" id="forty" placeholder="Number of 40ft containers">
-
-<br><br>
 
 <button onclick="calculateTEU()">
 Calculate TEU
 </button>
 
-<p id="result"></p>
 
-</div>
-
-<div class="tool">
-<h3>CBM Calculator</h3>
-<p>Kukokotoa ujazo wa mzigo kwa ajili ya mipango ya usafirishaji.</p>
-</div>
-
-
-<div class="tool">
-<h3>Container Reference</h3>
-<p>Maelezo ya aina za makontena, codes na matumizi yake.</p>
-</div>
-
-
-<div class="tool">
-<h3>Logistics Glossary</h3>
-<p>Kamusi ya maneno muhimu ya bandari, forodha na supply chain.</p>
-</div>
+<p id="teuResult"></p>
 
 
 </div>
+
+
+<div class="card">
+
+<h2>CBM Calculator</h2>
+
+<p>
+Kokotoa ujazo wa mzigo kwa cubic meter.
+</p>
+
+
+<input type="number" id="length"
+placeholder="Length (m)">
+
+
+<input type="number" id="width"
+placeholder="Width (m)">
+
+
+<input type="number" id="height"
+placeholder="Height (m)">
+
+
+<button onclick="calculateCBM()">
+Calculate CBM
+</button>
+
+
+<p id="cbmResult"></p>
+
+
+</div>
+
+    <div class="card">
+
+<h2>Container Reference</h2>
+
+<p>
+Maelezo ya aina za makontena, codes na matumizi yake katika usafirishaji wa kimataifa.
+</p>
+
+<ul>
+<li>20ft Dry Container - General Cargo</li>
+<li>40ft Dry Container - Larger Cargo Capacity</li>
+<li>40ft High Cube - Extra Height Container</li>
+<li>Reefer Container - Temperature Controlled Cargo</li>
+</ul>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Logistics Glossary</h2>
+
+<p>
+Kamusi ya maneno muhimu ya bandari, forodha, shipping,
+container operations na supply chain.
+</p>
+
+</div>
+
 
 
 <div class="card">
@@ -145,8 +221,9 @@ Calculate TEU
 <h2>Bandari na Usafirishaji</h2>
 
 <p>
-Chanzo cha maarifa kuhusu Port Operations, Container Handling,
-Customs, Transport Coordination na International Trade.
+Chanzo cha maarifa kuhusu Port Operations,
+Container Handling, Customs, Transport Coordination
+na International Trade.
 </p>
 
 </div>
@@ -155,22 +232,63 @@ Customs, Transport Coordination na International Trade.
 </div>
 
 
+
 <footer>
-<p>© 2026 Bandari na Usafirishaji | Logistics Hub Tools</p>
+
+<p>
+© Bandari na Usafirishaji - Logistics Hub Tools
+</p>
+
 </footer>
 
+
+
 <script>
-function calculateTEU() {
 
-let twenty = document.getElementById("twenty").value;
-let forty = document.getElementById("forty").value;
 
-let totalTEU = (twenty * 1) + (forty * 2);
+function calculateTEU(){
 
-document.getElementById("result").innerHTML =
-"Total TEU: " + totalTEU;
+let twenty = Number(document.getElementById("twenty").value);
+
+let forty = Number(document.getElementById("forty").value);
+
+
+let total = (twenty * 1) + (forty * 2);
+
+
+document.getElementById("teuResult").innerHTML =
+"Total TEU: " + total;
+
 
 }
+
+
+
+function calculateCBM(){
+
+
+let length = Number(document.getElementById("length").value);
+
+let width = Number(document.getElementById("width").value);
+
+let height = Number(document.getElementById("height").value);
+
+
+
+let cbm = length * width * height;
+
+
+
+document.getElementById("cbmResult").innerHTML =
+"Total CBM: " + cbm.toFixed(2) + " m³";
+
+
+}
+
+
 </script>
+
+
 </body>
+
 </html>
