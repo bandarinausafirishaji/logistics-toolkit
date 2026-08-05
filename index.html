@@ -309,30 +309,29 @@ na International Trade.
 
 <script>
 
-
 function calculateTEU(){
 
-let twenty = Number(document.getElementById("twenty").value);
-
-let forty = Number(document.getElementById("forty").value);
-
+let twenty = Number(document.getElementById("twenty").value) || 0;
+let forty = Number(document.getElementById("forty").value) || 0;
 
 let total = (twenty * 1) + (forty * 2);
-
 
 document.getElementById("teuResult").innerHTML =
 "Total TEU: " + total;
 
-
 }
 
 
-
-<script>
-
 function calculateCBM(){
 
-// code ya CBM calculator hapa
+let length = Number(document.getElementById("length").value);
+let width = Number(document.getElementById("width").value);
+let height = Number(document.getElementById("height").value);
+
+let cbm = length * width * height;
+
+document.getElementById("cbmResult").innerHTML =
+"Total CBM: " + cbm.toFixed(2) + " m³";
 
 }
 
@@ -372,7 +371,6 @@ document.getElementById("containerResult").innerHTML = result;
 }
 
 </script>
-
 </body>
 
 </html>
